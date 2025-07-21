@@ -7,7 +7,7 @@ def IsInternet():
     '''
 
     try:
-        requests.get("http://www.google.com")
+        requests.get("https://www.google.com")
         return True
 
     except requests.ConnectionError:

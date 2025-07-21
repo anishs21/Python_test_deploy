@@ -1,6 +1,6 @@
 import string
 import random
-
+import secrets
 
 class RandomPasswordGenerator:
     '''
@@ -45,7 +45,8 @@ class RandomPasswordGenerator:
         Using List Comprehension at method_one
         '''
 
-        password = [self.strings[random.randint(0, self.len_strings)] for _ in range(self.length)]
+        password = ''.join(secrets.choice(self.strings) for _ in range(self.length))
+
 
         return ''.join(password)
 
